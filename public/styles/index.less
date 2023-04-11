@@ -1,0 +1,355 @@
+@import "~rc-dock/style/index.less";
+@import "~antd/dist/antd.less";
+@import "./variables.less";
+@import "./file-browser.less";
+@import "./popover.less";
+@import "./widget.less";
+
+.app {
+    height: 100%;
+}
+
+.dock-panel.dock-style-main {
+    border: none;
+
+    .dock-bar {
+        background   : @layout-body-background;
+        border-bottom: 1px solid #eee;
+    }
+
+    .dock-tab {
+        background: none;
+    }
+}
+
+.dock-divider {
+    box-sizing: border-box;
+    flex      : 0 0 2px;
+    background: @dock-divider-background-color;
+    z-index   : 1;
+}
+
+.layout {
+    display: flex;
+    display: -webkit-flex;
+}
+
+.layout.vertical {
+    -webkit-flex-direction: column;
+    flex-direction        : column;
+}
+
+.layout.horizontal {
+    -webkit-flex-direction: row;
+    flex-direction        : row;
+}
+
+.center-vertical {
+    position : relative;
+    top      : 50%;
+    transform: translateY(-50%);
+}
+
+// toolbar styles
+.toolbar {
+    padding         : 6px 3px 0;
+    width           : 100%;
+    height          : 100%;
+    background-color: @component-background;
+    align-items     : center;
+}
+
+.toolbar-group {
+    display    : flex;
+    align-items: center;
+    height     : 100%;
+}
+
+.toolbar-group.align-left {
+    float: left;
+}
+
+.toolbar-group.align-right {
+    float: right;
+}
+
+.toolbar-divider {
+    margin     : 0 10px;
+    border-left: 1px solid rgba(16, 22, 26, 0.15);
+    height     : 40px;
+}
+
+.toolbar-divider-small {
+    margin     : 0 3px;
+    border-left: 1px solid rgba(16, 22, 26, 0.15);
+    height     : 1.3em;
+}
+
+// toolbar item styles
+.toolbar-item {
+    position        : relative;
+    display         : inline-block;
+    text-align      : center;
+    width           : 50px;
+    height          : 58px;
+    margin          : 0 1px;
+    background-color: @component-background;
+    border-radius   : 4px 4px 0 0;
+    cursor          : pointer;
+
+    &:hover {
+        background-color: @item-active-bg;
+    }
+
+    &:active {
+        background-color: darken(@item-active-bg, 5%);
+    }
+
+    .toolbar-item-icon {
+        margin-top: 9px;
+        font-size : 28px;
+    }
+
+    .toolbar-item-text {
+        font-size : 12px;
+        margin-top: 2px;
+    }
+}
+
+.toolbar-item-small {
+    &:hover {
+        background-color: @item-active-bg;
+    }
+}
+
+.toolbar-item.disabled {
+    color : #ddd;
+    cursor: default;
+
+    &:hover {
+        background-color: @component-background;
+    }
+
+    &:active {
+        background-color: @component-background;
+    }
+}
+
+.variables-panel {
+    .variables-header {
+        background-color: @component-background;
+        text-align      : center;
+    }
+}
+
+.inspector-panel {
+    width     : 100%;
+    height    : fit-content;
+    padding   : 8px 8px 4px 4px;
+}
+
+th.variable-cell-first,
+td.variable-cell-first {
+    padding: 16px 8px 16px 16px !important;
+}
+
+th.variable-cell-last,
+td.variable-cell-last {
+    padding: 16px 16px 16px 8px !important;
+}
+
+th.variable-cell,
+td.variable-cell {
+    padding: 16px 8px !important;
+}
+
+.suggestion-content {
+    display               : flex;
+    display               : -webkit-flex;
+    -webkit-flex-direction: row;
+    flex-direction        : row;
+    align-items           : center;
+}
+
+.react-autosuggest__suggestion-match {
+    color      : blue;
+    font-weight: bold;
+}
+
+.suggestion-input {
+    text-overflow: ellipsis;
+    direction    : rtl;
+    text-align   : left;
+    height       : 22px;
+    padding      : 1px;
+
+    &:focus {
+        direction: ltr;
+    }
+}
+
+.condition-group {
+    width                 : 100%;
+    padding               : 5px 24px;
+    display               : flex;
+    display               : -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction        : column;
+}
+
+.condition-group-header {
+    padding         : 8px 0;
+    width           : 100%;
+    height          : 50px;
+    background-color: @component-background;
+    align-items     : center;
+
+    &:hover .condition-del-btn {
+        opacity: 1;
+    }
+}
+
+.condition-group-content {
+    width                 : 100%;
+    display               : flex;
+    display               : -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction        : column;
+    padding               : 2px 0 2px 24px;
+}
+
+.condition-item {
+    width: 100%;
+
+    &:hover .condition-del-btn {
+        opacity: 1;
+    }
+}
+
+.condition-del-btn {
+    opacity  : 0;
+    transform: opacity .3s ease-in-out;
+}
+
+.ant-table-body {
+    overflow-y       : auto !important;
+    // &:hover {
+    //     overflow-y: auto !important;
+    // }
+}
+
+.card-container {
+    background: #eee;
+    text-align: left;
+    height    : 100%;
+}
+
+.card-container>.ant-tabs-card> {
+    height        : 100%;
+    display       : flex;
+    flex-direction: column;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-nav,
+.card-container>.ant-tabs-card>.ant-tabs-nav {
+    height: 35px;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-content-holder>.ant-tabs-content {
+    height: 100%;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-content-holder>.ant-tabs-content>.ant-tabs-tabpane {
+    background: #fff;
+    padding   : 10px;
+    width     : 100%;
+    height    : 100%;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-content-holder>.ant-tabs-content>.ant-tabs-tabpane-inactive {
+    display: none;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-nav {
+    margin      : 0;
+    border-color: #fff;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-nav .ant-tabs-tab {
+    border-color: transparent;
+    background  : transparent;
+    height      : 35px;
+    line-height : 35px;
+}
+
+.card-container>.ant-tabs-card>.ant-tabs-nav .ant-tabs-tab-active {
+    border-color: #fff;
+    background  : #fff;
+    height      : 35px;
+}
+
+.autoscroll {
+    overflow: hidden;
+
+    &:hover {
+        overflow: auto;
+    }
+}
+
+.ScrollbarsCustom {
+    position: relative;
+    width   : 100%;
+    height  : 100%;
+
+    .ScrollbarsCustom-Wrapper {
+        position: absolute;
+        top     : 0;
+        left    : 0;
+        bottom  : 0;
+        right   : 0;
+    }
+
+    .ScrollbarsCustom-Scroller {
+        box-sizing: "border-box";
+    }
+
+    .ScrollbarsCustom-Track {
+        position     : absolute;
+        overflow     : hidden;
+        border-radius: 4px;
+        background   : rgba(0, 0, 0, 0.1);
+        user-select  : none;
+    }
+
+    .ScrollbarsCustom-TrackX {
+        height : 5px;
+        width  : calc(100% - 10px);
+        bottom : 3px;
+        left   : 5px;
+        z-index: 1;
+    }
+
+    .ScrollbarsCustom-TrackY {
+        width  : 5px;
+        height : calc(100% - 10px);
+        top    : 5px;
+        right  : 3px;
+        z-index: 1;
+    }
+
+    .ScrollbarsCustom-Thumb {
+        cursor       : pointer;
+        border-radius: 4px;
+        background   : rgba(0, 0, 0, 0.4);
+    }
+
+    .ScrollbarsCustom-ThumbX {
+        height: 100%;
+        width : 0;
+    }
+
+    .ScrollbarsCustom-ThumbY {
+        width : 100%;
+        height: 0;
+    }
+}

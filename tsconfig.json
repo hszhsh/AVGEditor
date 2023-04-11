@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "@public/*": [
+                "public/*"
+            ],
+            "@main/*": [
+                "src/main/*"
+            ],
+            "@renderer*/": [
+                "src/renderer/*"
+            ],
+            "@utils/*": [
+                "src/utils/*"
+            ]
+        },
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+        "sourceMap": true,
+        "target": "esnext"
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "runtime-template",
+        "dist"
+    ]
+}

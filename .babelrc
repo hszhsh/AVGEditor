@@ -1,0 +1,23 @@
+{
+    "presets": [
+       [
+           "@babel/preset-env",
+            {
+                "targets": {
+                    "electron": "7",
+                    "esmodules": true
+                }
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/proposal-class-properties"
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                "react-hot-loader/babel"
+            ]
+        }
+    }
+}

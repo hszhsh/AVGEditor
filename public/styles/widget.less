@@ -1,0 +1,137 @@
+#upper {
+    margin: 0 auto 6px auto;
+}
+
+#widget-outer {
+    width : 200px;
+    margin: 0 auto;
+}
+
+#widget-outer .h-control-group {
+    height     : 26px;
+    position   : relative;
+    margin-left: 72px;
+}
+
+.layout.center,
+.layout.center-center {
+    -ms-flex-align     : center;
+    -webkit-align-items: center;
+    align-items        : center;
+}
+
+.arrow {
+    position: absolute;
+}
+
+.arrow.left {
+    left: -2.5px;
+    top : -2px;
+}
+
+.arrow.left:after {
+    border      : 2.5px solid transparent;
+    border-right: 4px solid #ccc;
+    position    : absolute;
+    content     : ' '
+}
+
+.arrow.right {
+    right: 4px;
+    top  : -2px;
+}
+
+.arrow.right:before {
+    border     : 2.5px solid transparent;
+    border-left: 4px solid #ccc;
+    position   : absolute;
+    content    : ' '
+}
+
+.arrow.up {
+    top : -3px;
+    left: -2px;
+}
+
+.arrow.up:after {
+    border       : 2.5px solid transparent;
+    border-bottom: 4px solid #ccc;
+    position     : absolute;
+    content      : ' '
+}
+
+.arrow.down {
+    bottom: 4px;
+    left  : -2px;
+}
+
+.arrow.down:before {
+    border    : 2.5px solid transparent;
+    border-top: 4px solid #ccc;
+    position  : absolute;
+    content   : ' '
+}
+
+.h-arrow-line {
+    width     : 4px;
+    margin    : 0 4px 0 4px;
+    border-top: 1px solid #ccc;
+}
+
+.v-arrow-line {
+    height     : 4px;
+    margin     : 4px 0 4px 0;
+    border-left: 1px solid #ccc;
+}
+
+#left-arrow {
+    position: absolute;
+    top     : 50%;
+    left    : -13px;
+}
+
+#right-arrow {
+    position: absolute;
+    top     : 50%;
+    right   : -13px;
+}
+
+#top-arrow {
+    position: absolute;
+    top     : -13px;
+    left    : 50%;
+}
+
+#bottom-arrow {
+    position: absolute;
+    left    : 50%;
+    bottom  : -13px;
+}
+
+.widget-child-panel {
+    top             : 0px;
+    left            : 0px;
+    position        : absolute;
+    box-sizing      : border-box;
+    border-radius   : 5px;
+    border          : 1px solid #ccc;
+    background-color: #eee;
+}
+
+.widget-dashed-line {
+    position    : absolute;
+    border-style: dashed;
+    border-color: rgb(165, 165, 165);
+    border-image: initial;
+}
+
+.widget-parent-panel {
+    margin          : 3px 8px;
+    background-color: #fafafa;
+    border          : 1px solid #e4e4e4;
+    box-shadow      : #dddddd 0px 0px 4px;
+    box-sizing      : content-box;
+    position        : relative;
+    width           : 84px;
+    height          : 84px;
+}
